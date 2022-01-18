@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="edit_client_back">Back</string>
+    <string name="edit_client_next">Next</string>
+    <string name="edit_client_done">Done</string>
+    <string name="edit_client_"></string>
+
+</resources>

@@ -1,4 +1,4 @@
-package com.aklymov.mynetdaity.feature_clients_list.viewmodel
+package com.aklymov.mynetdaity.feature_clients_list.view
 
 import android.content.res.Resources
 import android.view.View
@@ -9,7 +9,7 @@ import com.aklymov.mynetdaity.feature_clients_list.R
 import com.aklymov.mynetdaity.feature_clients_list.databinding.ItemClientBinding
 import com.squareup.picasso.Picasso
 
-class ClientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+internal class ClientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     private val binding: ItemClientBinding = DataBindingUtil.bind(itemView)!!
     private val resoruces: Resources
@@ -28,7 +28,7 @@ class ClientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         )
         binding.tvItemClientWeightValue.text = resoruces.getString(
             R.string.weight_template,
-            client.weightLb
+            client.weightKg
         )
     }
 }

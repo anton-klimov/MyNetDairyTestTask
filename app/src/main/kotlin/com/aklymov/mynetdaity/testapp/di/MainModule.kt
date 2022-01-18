@@ -9,7 +9,7 @@ import org.kodein.di.bind
 import org.kodein.di.scoped
 import org.kodein.di.singleton
 
-object MainModule : BaseModule {
+internal object MainModule : BaseModule {
 
     override val instance: DI.Module = DI.Module("MainModule") {
         bind<ClientsRepository>() with scoped(ActivityRetainedScope).singleton {

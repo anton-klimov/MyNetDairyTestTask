@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="client_edit_title_vertical_margin">16dp</dimen>
+    <dimen name="client_edit_title_text_size">20dp</dimen>
+    <dimen name="client_edit_title_"></dimen>
+    <dimen name="client_edit_button_width">80dp</dimen>
+    <dimen name="client_edit_button_height">40dp</dimen>
+    <dimen name="client_edit_button_text_size">16dp</dimen>
+    <dimen name="client_edit_"></dimen>
+
+</resources>

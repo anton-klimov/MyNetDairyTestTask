@@ -1,4 +1,4 @@
-package com.aklymov.mynetdaity.feature_clients_list.viewmodel
+package com.aklymov.mynetdaity.feature_clients_list.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import com.aklymov.mynetdaity.common_clients.entity.Client
 import com.aklymov.mynetdaity.feature_clients_list.R
 
-class ClientsListAdapter : ListAdapter<Client, ClientViewHolder>(DiffCallback()) {
+internal class ClientsListAdapter : ListAdapter<Client, ClientViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClientViewHolder {
         return ClientViewHolder(
