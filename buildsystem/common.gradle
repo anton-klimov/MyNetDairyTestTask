@@ -1,0 +1,30 @@
+apply plugin: 'kotlin-android'
+apply from: '../buildsystem/dependencies.gradle'
+
+ext {
+    compileSdk = 31
+    targetSdk = 31
+    minSdk = 21
+}
+
+android {
+    compileSdkVersion project.compileSdk
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        minSdkVersion project.minSdk
+        targetSdkVersion project.targetSdk
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}

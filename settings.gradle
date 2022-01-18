@@ -8,3 +8,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MyNetDairyTestApp"
 include ':app'
+include ':feature-clients-list'
+include ':feature-clients-common'
+include ':common'
+include ':common-ui'
+include ':common-di'
+include ':feature-clients-inmemory-repository'

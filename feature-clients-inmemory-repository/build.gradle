@@ -1,0 +1,9 @@
+androidLibrary()
+
+dependencies {
+    implementation project(":feature-clients-common")
+
+    implementation coroutines.android
+
+    implementation di.kodeinCore
+}

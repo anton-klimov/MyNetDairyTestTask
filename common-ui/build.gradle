@@ -1,0 +1,5 @@
+androidUiLibrary()
+
+dependencies {
+    implementation androidx.appCompat
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ClientsList" />
+
+    <style name="ClientsList.Text">
+        <item name="android:textSize">@dimen/item_client_text_size</item>
+        <item name="android:textColor">#808080</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+
+    </style>
+
+</resources>

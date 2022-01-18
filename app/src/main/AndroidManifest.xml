@@ -3,6 +3,7 @@
     package="com.aklymov.mynetdaity.testapp">
 
     <application
+        android:name=".TestApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,7 +11,7 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.MyNetDairyTestApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

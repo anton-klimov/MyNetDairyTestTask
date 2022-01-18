@@ -1,0 +1,21 @@
+androidUiLibrary()
+
+dependencies {
+    implementation project(':common-di')
+    implementation project (':common-ui')
+    implementation project (':feature-clients-common')
+
+    implementation androidx.appCompat
+    implementation androidx.recyclerView
+    implementation androidx.constraintLayout
+
+    implementation androidx.viewModel
+
+    implementation coroutines.android
+    implementation coroutines.lifecycle
+
+    implementation ui.picasso
+
+    implementation di.kodeinCore
+    implementation di.kodeinAndroid
+}

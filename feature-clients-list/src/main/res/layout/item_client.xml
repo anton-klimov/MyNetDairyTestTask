@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/ivItemClientPhoto"
+            android:layout_width="@dimen/item_client_image_size"
+            android:layout_height="@dimen/item_client_image_size"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            />
+
+        <TextView
+            android:id="@+id/tvItemClientWeightLabel"
+            style="@style/ClientsList.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/clients_list_item_weight"
+            app:layout_constraintBottom_toTopOf="@id/tvItemClientWeightValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivItemClientPhoto"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+        <TextView
+            android:id="@+id/tvItemClientWeightValue"
+            style="@style/ClientsList.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvItemClientDateOfBirthLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvItemClientWeightLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvItemClientWeightLabel"
+            tools:text="181lb"
+            />
+        
+        <TextView
+            android:id="@+id/tvItemClientDateOfBirthLabel"
+            style="@style/ClientsList.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/clients_list_item_date_of_birth"
+            app:layout_constraintBottom_toTopOf="@id/tvItemClientDateOfBirthValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvItemClientWeightLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvItemClientWeightValue"
+            />
+
+        <TextView
+            android:id="@+id/tvItemClientDateOfBirthValue"
+            style="@style/ClientsList.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/bItemClientEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvItemClientWeightLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvItemClientDateOfBirthLabel"
+            tools:text="181lb"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bItemClientEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="@string/clients_list_item_edit"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvItemClientWeightLabel"
+            app:layout_constraintTop_toBottomOf="@id/tvItemClientDateOfBirthValue"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

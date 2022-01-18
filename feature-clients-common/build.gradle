@@ -1,0 +1,7 @@
+androidLibrary()
+
+dependencies {
+    implementation project(':common')
+
+    implementation coroutines.android
+}

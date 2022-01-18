@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="clients_list_divider_height">2dp</dimen>
+
+</resources>

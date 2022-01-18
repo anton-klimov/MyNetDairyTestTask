@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="clients_list_add">Add</string>
+    
+    <string name="clients_list_item_weight">Weight</string>
+    <string name="clients_list_item_date_of_birth">Date of Birth</string>
+    <string name="clients_list_item_edit">Edit</string>
+    
+</resources>
