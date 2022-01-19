@@ -16,17 +16,28 @@ class InMemoryClientsRepository : ClientsRepository, ScopeCloseable {
     private val clientListStateFlow: MutableStateFlow<List<Client>> = MutableStateFlow(emptyList())
     override val clientsList: Flow<List<Client>> = clientListStateFlow
 
-    override fun addClient(client: Client) {
-        clientListStateFlow.update { currentClientsList ->
-            currentClientsList.plus(client)
-        }
+    override fun getNotCreatedClientId(): Int {
+        return Client.DEFAULT_ID
     }
 
-    override fun updateClient(client: Client) {
+    override fun getOrCreateClient(id: Int): Client {
+        return clientListStateFlow.value.find { it.id == id } ?: Client()
+    }
+
+    override fun updateOrAddClient(client: Client) {
         clientListStateFlow.update { currentClientsList ->
             val updatedList = currentClientsList.toMutableList()
-            val clientToUpdateIndex = currentClientsList.indexOfFirst { it.id == client.id }
-            updatedList[clientToUpdateIndex] = client
+            if (client.id == Client.DEFAULT_ID) {
+                val latestId = if (currentClientsList.isNotEmpty()) {
+                    currentClientsList.maxOf { it.id }
+                } else {
+                    0
+                }
+                updatedList.add(client.copy(id = latestId + 1))
+            } else {
+                val clientToUpdateIndex = currentClientsList.indexOfFirst { it.id == client.id }
+                updatedList[clientToUpdateIndex] = client
+            }
             updatedList
         }
     }

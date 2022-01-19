@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="edit_client_back">Back</string>
+    <string name="edit_client_next">Next</string>
+    <string name="edit_client_done">Done</string>
+    <string name="edit_client_weight">Weight</string>
+    <string name="edit_client_weight_template">"%.2f"</string>
+
+    <string name="edit_client_image_select_image">Select Image</string>
+    <string name="edit_client_image_take_photo">Take photo</string>
+
+    <string-array name="edit_client_weight_measures">
+        <item>lb</item>
+        <item>kg</item>
+    </string-array>
+    
+</resources>

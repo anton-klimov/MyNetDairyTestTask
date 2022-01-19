@@ -1,25 +1,18 @@
 package com.aklymov.mynetdaity.common_ui
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.launch
 
-abstract class BaseFragment<T: ViewDataBinding> : Fragment() {
+abstract class BaseFragment : Fragment() {
 
-    abstract val layoutId: Int
-
-    protected lateinit var binding: T
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = DataBindingUtil.inflate<T>(inflater, layoutId, container, false)
-        return binding.root
+    protected fun launchAndCollectOnStart(block: suspend () -> Unit) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                block.invoke()
+            }
+        }
     }
 }

@@ -7,7 +7,9 @@ interface ClientsRepository {
 
     val clientsList: Flow<List<Client>>
 
-    fun addClient(client: Client)
+    fun getNotCreatedClientId(): Int
 
-    fun updateClient(client: Client)
+    fun getOrCreateClient(id: Int): Client
+
+    fun updateOrAddClient(client: Client)
 }

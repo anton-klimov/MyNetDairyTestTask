@@ -17,3 +17,5 @@ Contains domain and data layers for clients related logic, such as Client entity
 Contains in memory storage implementation of ClientsRepository
 ### feature-clients-list
 Presentation layer of clients list feature
+### feature-client-edit
+Feature module which contains UI and logic of clients creating and editing

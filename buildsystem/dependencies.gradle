@@ -8,11 +8,13 @@ ext {
     constraintLayoutVersion = "2.1.3"
     ktxVersion = "1.7.0"
     lifecycleVersion = "2.4.0"
+    viewPager2Version = "1.0.0"
 
     kotlinCoroutinesVersion = "1.6.0"
     coroutinesKtxVersion = "2.4.0"
 
     picassoVersion = "2.71828"
+    scrollingIndicatorVersion = "1.2.1"
 
     kodeinVersion = "7.10.0"
 
@@ -22,7 +24,8 @@ ext {
             recyclerView    : "androidx.recyclerview:recyclerview:$recyclerViewVersion",
             constraintLayout: "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
             ktx             : "androidx.core:core-ktx:$ktxVersion",
-            viewModel       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+            viewModel       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion",
+            viewPager2      : "androidx.viewpager2:viewpager2:$viewPager2Version"
 
     ]
 
@@ -38,7 +41,8 @@ ext {
     ]
 
     ui = [
-            picasso     : "com.squareup.picasso:picasso:2.71828"
+            picasso             : "com.squareup.picasso:picasso:2.71828",
+            scrollingIndicator  : "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:$scrollingIndicatorVersion"
     ]
 
     di = [

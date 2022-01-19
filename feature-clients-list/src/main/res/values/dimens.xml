@@ -2,5 +2,6 @@
 <resources>
 
     <dimen name="clients_list_divider_height">2dp</dimen>
+    <dimen name="clients_list_empty_view_text_size">16dp</dimen>
 
 </resources>

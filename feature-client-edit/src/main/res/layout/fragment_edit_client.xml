@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="SpUsage"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpEditClient"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/client_edit_title_vertical_margin"
+            app:layout_constraintBottom_toTopOf="@id/bEditClientNegative"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/bEditClientNegative"
+            style="@style/ClientEdit.Button"
+            android:text="@string/edit_client_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/spiClientEdit"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+        <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+            android:id="@+id/spiClientEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/bEditClientNegative"
+            app:layout_constraintEnd_toStartOf="@id/bEditClientPositive"
+            app:layout_constraintStart_toEndOf="@id/bEditClientNegative"
+            app:layout_constraintTop_toTopOf="@id/bEditClientNegative"
+            />
+
+        <Button
+            android:id="@+id/bEditClientPositive"
+            style="@style/ClientEdit.Button"
+            android:text="@string/edit_client_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/spiClientEdit"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

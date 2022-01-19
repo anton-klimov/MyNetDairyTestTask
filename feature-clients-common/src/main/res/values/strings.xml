@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="weight_template">%d lb</string>
+    <string name="weight_template">%.0f lb</string>
     <string name="date_of_birth_template">%1$tb %1$td, %1$tY</string>
 
 </resources>

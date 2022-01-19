@@ -10,7 +10,7 @@ import org.kodein.di.DIAware
 import org.kodein.di.android.closestDI
 import org.kodein.di.android.subDI
 
-class MainActivity : AppCompatActivity(), DIAware {
+internal class MainActivity : AppCompatActivity(), DIAware {
 
     override val di: DI by subDI(closestDI()) {
         import(MainModule.instance)

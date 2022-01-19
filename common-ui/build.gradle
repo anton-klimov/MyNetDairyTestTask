@@ -2,4 +2,6 @@ androidUiLibrary()
 
 dependencies {
     implementation androidx.appCompat
+    implementation coroutines.android
+    implementation coroutines.lifecycle
 }

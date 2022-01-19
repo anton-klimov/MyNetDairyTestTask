@@ -1,14 +1,13 @@
 androidUiLibrary()
 
 dependencies {
-    implementation project(':common-di')
-    implementation project (':common-ui')
-    implementation project (':feature-clients-common')
-    implementation project (':feature-client-edit')
+    implementation project(":common-di")
+    implementation project(":common-ui")
+    implementation project(":feature-clients-common")
 
     implementation androidx.appCompat
-    implementation androidx.recyclerView
     implementation androidx.constraintLayout
+    implementation androidx.viewPager2
 
     implementation androidx.viewModel
 
@@ -16,6 +15,7 @@ dependencies {
     implementation coroutines.lifecycle
 
     implementation ui.picasso
+    implementation ui.scrollingIndicator
 
     implementation di.kodeinCore
     implementation di.kodeinAndroid
